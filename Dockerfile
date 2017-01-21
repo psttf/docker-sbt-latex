@@ -29,5 +29,9 @@ RUN \
   apt-get install sbt && \
   sbt sbtVersion
 
+# Install texlive
+RUN apt-get update -q
+RUN apt-get install -qy texlive-full 
+
 # Define working directory
 WORKDIR /root
